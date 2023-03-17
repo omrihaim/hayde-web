@@ -10,7 +10,7 @@ interface fetchWrapProps {
 const fetchWrap = async ({ method, url, body, signal }: fetchWrapProps) => {
   const jwtToken = localStorage.getItem('jwtToken');
   const config = {
-    baseURL: 'https://api.realworld.io/api',
+    baseURL: 'https://hayde-server.herokuapp.com/',
     headers: {
       Authorization: !!jwtToken ? `Token ${jwtToken}` : '',
     },
